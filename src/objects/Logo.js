@@ -26,7 +26,7 @@ export default class Logo extends Phaser.Sprite {
 	}  	
 
 	if (input.keyboard.isDown(this.controls.DOWN)) {
-		this.y += 10;
+		this.y = Math.min( this.y + 10, 600);
 	}  		    
 
 	if (input.keyboard.isDown(this.controls.LEFT)) {
@@ -35,7 +35,7 @@ export default class Logo extends Phaser.Sprite {
 
 
 	if (input.keyboard.isDown(this.controls.RIGHT)) {
-		this.x += 10;
+		this.x = Math.min( this.x + 10, 800);
 	}
 
 
