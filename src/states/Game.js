@@ -13,8 +13,18 @@ export default class Game extends Phaser.State {
     // TODO: Replace this with really cool game code here :)
 
     const { centerX: x, centerY: y } = this.world;
-    var logo_p1 = new Logo(this.game, x - 50, y - 50);
-    var logo_p2 = new Logo(this.game, x, y);
+    var logo_p1 = new Logo(this.game, x - 50, y - 50, {
+    	UP: Phaser.Keyboard.W,
+    	DOWN: Phaser.Keyboard.S,
+    	LEFT: Phaser.Keyboard.A,
+    	RIGHT: Phaser.Keyboard.D
+    });
+    var logo_p2 = new Logo(this.game, x, y, {
+    	UP: Phaser.Keyboard.UP,
+    	DOWN: Phaser.Keyboard.DOWN,
+    	LEFT: Phaser.Keyboard.LEFT,
+    	RIGHT: Phaser.Keyboard.RIGHT
+    });
     this.logo_p1 = logo_p1;
     this.logo_p2 = logo_p2;
     this.add.existing(logo_p1);
@@ -22,52 +32,6 @@ export default class Game extends Phaser.State {
   }
 
   update() {
-
-
-	    if (this.input.keyboard.isDown(Phaser.Keyboard.W)) {
-	    	console.log('UP');
-	    	this.logo_p2.y -= 10;
-	    }  	
-
-	    if (this.input.keyboard.isDown(Phaser.Keyboard.S)) {
-	    	console.log('DOWN');
-	    	this.logo_p2.y += 10;
-	    }  		    
-
-	    if (this.input.keyboard.isDown(Phaser.Keyboard.A)) {
-	    	console.log('LEFT');
-	    	this.logo_p2.x -= 10;
-	    }
-
-
-	    if (this.input.keyboard.isDown(Phaser.Keyboard.D)) {
-			console.log('xxxxRIGHT');
-			this.logo_p2.x += 10;
-	    }
-
-
-
-
-	    if (this.input.keyboard.isDown(Phaser.Keyboard.UP)) {
-	    	console.log('UP');
-	    	this.logo_p1.y -= 10;
-	    }  	
-
-	    if (this.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
-	    	console.log('DOWN');
-	    	this.logo_p1.y += 10;
-	    }  		    
-
-	    if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
-	    	console.log('LEFT');
-	    	this.logo_p1.x -= 10;
-	    }
-
-
-	    if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
-			console.log('xxxxRIGHT');
-			this.logo_p1.x += 10;
-	    }
 
   }
 
