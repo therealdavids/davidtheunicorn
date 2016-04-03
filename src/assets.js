@@ -25,6 +25,17 @@ export default {
   game: [{
     key: 'phaser',
     type: 'image'
+  }],
+
+  menu: [{
+    key: 'dude-selector',
+    type: 'image'
+  }, {
+    key: 'dude',
+    type: 'image'
+  }, {
+    key: 'dude2',
+    type: 'image'
   // }, {
   //   // Example: Add background music.
   //   key: 'tune',
